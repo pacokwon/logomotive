@@ -1,7 +1,7 @@
 {
   "name": "pocomotive",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/pacokwon/pocomotive.git",
   "author": "pacokwon <haechank@gmail.com>",
   "license": "MIT",
