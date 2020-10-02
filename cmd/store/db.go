@@ -1,9 +1,13 @@
 package store
 
 import (
+	"github.com/pacokwon/logomotive/cmd/models"
 	"gorm.io/gorm"
 )
 
-type Env struct {
-	DB *gorm.DB
+var DB *gorm.DB
+
+func Init(db *gorm.DB) {
+	DB = db
+	DB.AutoMigrate(&models.User{}, &models.Article{}, &models.Comment{})
 }
