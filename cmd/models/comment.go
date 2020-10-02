@@ -7,10 +7,11 @@ import (
 
 type Comment struct {
 	gorm.Model
-	Article Article `gorm:"references:Id"`
-	Content string  `gorm:"varchar(200)"`
-	Posted  time.Time
-	Author  string `gorm:"varchar(10)"`
+	ArticleID int16
+	Article   Article `gorm:"foreignKey:ArticleID;references:Id"`
+	Content   string  `gorm:"varchar(200)"`
+	Posted    time.Time
+	Author    string `gorm:"varchar(10)"`
 }
 
 func (Comment) TableName() string {
